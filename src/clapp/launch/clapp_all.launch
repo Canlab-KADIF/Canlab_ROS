@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<launch>
+	<node pkg="clapp" type="clapp_node" name="clapp_node" output="screen" />
+	
+	<include file="$(find clpe_ros)/launch/clpe_ros.launch" />
+	<include file="$(find socketcan_bridge)/launch/can.launch" />
+	<include file="$(find velodyne_pointcloud)/launch/VLP16_points.launch" />
+</launch>
