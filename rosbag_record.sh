@@ -3,14 +3,14 @@
 cat <<EOF
 ************************************
 *                                  *
-*  CREATE NEW FOLDER NAME	    *
+*  CREATE SAVE BAG FOLDER NAME     *
 *                                  *
 ************************************
 EOF
 
 read name
 
-BAG_DIR=~/$name
+BAG_DIR=/home/$USER/$name/
 
 if [ -d ${BAG_DIR} ]; then
 	echo "ALREADY EXIST FOLDER"
@@ -22,7 +22,7 @@ fi
 cat <<EOF
 ************************************
 *                                  *
-*  SET DURATION TIME      	    *
+*  SET DURATION TIME (s/m/h)       *
 *                                  *
 ************************************
 EOF
@@ -38,4 +38,4 @@ cat <<EOF
 ************************************
 EOF
 
-`rosbag record -o ~/$name/  --split --duration $duration --max-splits 3 -a`
+`rosbag record -o ${BAG_DIR}/ --split --duration $duration --max-splits 3 -a`
