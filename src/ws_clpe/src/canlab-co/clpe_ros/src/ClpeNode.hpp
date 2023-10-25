@@ -143,8 +143,6 @@ public:
        this->cam_enabled_[i] = camStat[i];
     }
     
-    free(camStat);
-    
     ROS_INFO("Successfully discovered camera properties");
 
     // create camera publishers
@@ -208,9 +206,11 @@ public:
       {
         const std::error_code error(result, clpe::StartStreamError::get());
         ROS_FATAL("Failed to start streaming (%s)", error.message().c_str());
+        free(camStat);
         exit(result);
       }
       ROS_INFO("Start streaming images");
+      free(camStat);
     }
   }
 
