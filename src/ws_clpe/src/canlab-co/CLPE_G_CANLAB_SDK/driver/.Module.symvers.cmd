@@ -1,0 +1,1 @@
+cmd_/home/canlab/Canlab_ROS/src/ws_clpe/src/canlab-co/CLPE_G_CANLAB_SDK/driver/Module.symvers := sed 's/\.ko$$/\.o/' /home/canlab/Canlab_ROS/src/ws_clpe/src/canlab-co/CLPE_G_CANLAB_SDK/driver/modules.order | scripts/mod/modpost -m -a  -o /home/canlab/Canlab_ROS/src/ws_clpe/src/canlab-co/CLPE_G_CANLAB_SDK/driver/Module.symvers -e -i Module.symvers   -T -
