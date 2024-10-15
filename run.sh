@@ -3,7 +3,7 @@
 PASSWD=1
 
 ROS_DIR=/opt/ros/noetic
-ROS_WS_DIR=/home/canlab/ros_ws
+ROS_WS_DIR=/home/$USER/Canlab_ROS
 
 if [ `whoami` == "root" ]; then
 	./set_max_freq.sh
