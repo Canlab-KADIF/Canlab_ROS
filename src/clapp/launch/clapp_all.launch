@@ -4,5 +4,5 @@
 	
 	<include file="$(find clpe_ros)/launch/clpe_ros.launch" />
 	<include file="$(find socketcan_bridge)/launch/can.launch" />
-	<include file="$(find velodyne_pointcloud)/launch/VLP16_points.launch" />
+	<include file="$(find rslidar_sdk)/launch/start.launch" />
 </launch>
